@@ -37,7 +37,7 @@ Este é um projeto estático, não requer instalação de dependências (npm/nod
 
 1.  Clone este repositório:
     ```bash
-    git clone https://silasgoncalvesczs.github.io/placar/(https://silasgoncalvesczs.github.io/placar/)
+    git clone [https://silasgoncalvesczs.github.io/placar/](https://silasgoncalvesczs.github.io/placar/)
     ```
 2.  Abra o arquivo `index.html` em qualquer navegador moderno.
 
