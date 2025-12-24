@@ -1,0 +1,307 @@
+/* Importando variáveis de cores natalinas */
+:root {
+    --bg-gradient-start: #0f2027;
+    /* Verde/Azul noite profundo */
+    --bg-gradient-end: #203a43;
+    --card-bg: #ffffff;
+    --texto-escuro: #2c3e50;
+    --vermelho-natal: #c0392b;
+    --verde-natal: #27ae60;
+    --dourado: #f1c40f;
+    --sombra: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    /* Fundo Escuro Festivo (Degradê Diagonal) */
+    background: radial-gradient(circle at top right, #1a472a, #2c0406);
+    background-attachment: fixed;
+    /* O fundo não rola */
+    color: white;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+/* O Painel Central com efeito de Vidro */
+.main-wrapper {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    /* Transparente */
+    backdrop-filter: blur(10px);
+    /* Desfoque atrás */
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: var(--dourado);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    color: #ddd;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Input e Botão de Cadastro */
+.add-player-box {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    width: 60%;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+#btnAdd {
+    background-color: var(--verde-natal);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0 30px;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+#btnAdd:hover {
+    background-color: #2ecc71;
+    transform: scale(1.05);
+}
+
+/* LISTA E CARDS */
+.player-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    color: var(--texto-escuro);
+    padding: 12px 20px;
+    border-radius: 60px;
+    /* Bem redondo */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Pulo elástico */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animação suave ao passar o mouse */
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* Destaque 1º Lugar */
+.card.top-1 {
+    background: linear-gradient(to right, #fffbf0, #fff);
+    border: 3px solid var(--dourado);
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.6);
+    /* Brilho Dourado */
+    transform: scale(1.03);
+    z-index: 10;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.avatar-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #eee;
+    border: 3px solid white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.rank {
+    font-size: 1.4em;
+    font-weight: 800;
+    color: #bdc3c7;
+    width: 35px;
+    text-align: center;
+}
+
+.top-1 .rank {
+    color: #d35400;
+    text-shadow: 1px 1px 0px #f1c40f;
+}
+
+.top-1 .name {
+    color: #d35400;
+}
+
+.name {
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.score-display {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: var(--vermelho-natal);
+    min-width: 70px;
+    text-align: center;
+    margin-right: 15px;
+    background: #fdf2f2;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+/* BOTÕES DE AÇÃO */
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-pt {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transition: filter 0.2s, transform 0.1s;
+    display: flex;
+    /* Centralizar texto */
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-pt:active {
+    transform: scale(0.9);
+}
+
+.btn-pt:hover {
+    filter: brightness(1.1);
+}
+
+.add-10 {
+    background: var(--verde-natal);
+}
+
+.add-50 {
+    background: #16a085;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.sub-5 {
+    background: var(--vermelho-natal);
+}
+
+.del {
+    background: transparent;
+    color: #95a5a6;
+    box-shadow: none;
+    border: 1px solid #bdc3c7;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+.del:hover {
+    background: #c0392b;
+    color: white;
+    border-color: #c0392b;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.btn-danger {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fab1a0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-danger:hover {
+    background: var(--vermelho-natal);
+    color: white;
+}
+
+/* Neve Caindo */
+.snowflake {
+    position: fixed;
+    top: -10px;
+    z-index: 1;
+    /* Atrás do painel se quiser, ou 9999 pra frente */
+    color: #fff;
+    /* Neve Branca */
+    opacity: 0.8;
+    pointer-events: none;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Deixa o painel na frente da neve */
+.main-wrapper {
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
