@@ -54,4 +54,4 @@ Para garantir a melhor experiência na hora das brincadeiras:
 
 ---
 
-Desenvolvido com ❤️ por SILAS GONÇALVES
+Desenvolvido com ❤️ por [SILAS GONÇALVES]
