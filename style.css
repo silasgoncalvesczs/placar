@@ -305,3 +305,22 @@ footer {
         opacity: 0;
     }
 }
+
+/* --- CRÉDITOS / COPYRIGHT --- */
+.copyright {
+    margin-top: 25px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5); /* Cor suave */
+}
+
+.copyright a {
+    color: var(--dourado); /* Cor dourada para destacar seu nome */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.copyright a:hover {
+    color: #fff; /* Fica branco ao passar o mouse */
+    text-decoration: underline;
+}
