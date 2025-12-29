@@ -4,43 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placar de Natal</title>
+    <title>Leaderboard - Game Night</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎄</text></svg>">
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏆</text></svg>">
 </head>
 
 <body>
 
-
     <div class="main-wrapper">
         <header>
-            <h1>🎄 Placar de Natal 🎅</h1>
-            <p class="subtitle">Edição Especial de Natal</p>
+            <h1>GAME NIGHT 🎮</h1>
+            <p class="subtitle">Ranking Oficial da Galera</p>
 
             <div class="add-player-box">
-                <input type="text" id="inputNome" placeholder="Nome do participante..." autocomplete="off">
-                <button id="btnAdd" onclick="adicionar()">Cadastrar</button>
+                <input type="text" id="inputNome" placeholder="Nome do jogador..." autocomplete="off">
+                <button id="btnAdd" onclick="adicionar()">ENTRAR</button>
             </div>
         </header>
 
         <div id="listaJogadores" class="player-list">
-        </div>
+            </div>
 
         <footer>
-            <button onclick="resetarTudo()" class="btn-danger">🗑️ Zerar Tudo</button>
+            <div class="footer-buttons">
+                <button onclick="encerrarJogo()" class="btn-finish">🏆 Encerrar & Premiar</button>
+                <button onclick="resetarTudo()" class="btn-danger">Resetar Placar</button>
+            </div>
             
             <div class="copyright">
-                © 2024 Desenvolvido por <a href="https://github.com/silasgoncalvesczs?tab=repositories" target="_blank">Silas Gonçalves</a>
+                © 2025 Desenvolvido por <a href="https://github.com/silasgoncalvesczs?tab=repositories" target="_blank">Silas Gonçalves</a>
             </div>
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    
     <script src="script.js"></script>
 </body>
 
