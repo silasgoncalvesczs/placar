@@ -6,7 +6,7 @@
 
 > Placar interativo com tema Neon/Arcade para gerenciar pontuações de jogos em tempo real. Projetado para TV e projeções.
 
-![Screenshot do Projeto](./screenshot.png)
+![Screenshot do Projeto](./screenshotv2.png.png)
 
 ## ✨ Funcionalidades
 
